@@ -1,0 +1,545 @@
+.circular {
+  -webkit-animation: rotate 2s linear infinite;
+  animation: rotate 2s linear infinite;
+  height: 100%;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.translate-loading {
+  width: 30px;
+  height: 30px;
+  margin-left: auto;
+  position: absolute;
+  margin: 0 auto;
+  left: 8px;
+  top: 8px;
+}
+
+.path {
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  -webkit-animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+  animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+  stroke-linecap: round;
+}
+
+@-webkit-keyframes rotate {
+  to {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes rotate {
+  to {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35;
+  }
+  to {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124;
+  }
+}
+@keyframes color {
+  0%,
+  to {
+    stroke: #d62d20;
+  }
+  40% {
+    stroke: #0057e7;
+  }
+  66% {
+    stroke: #008744;
+  }
+  80%,
+  90% {
+    stroke: #ffa700;
+  }
+}
+body,
+html {
+  height: 100%;
+}
+/* Vomnibar CSS */
+#vomnibar > ol,
+#vomnibar > ul {
+  border-top: none;
+  box-shadow: 0px 2px 12px 0px rgba(34, 34, 38, 0.1);
+  list-style: none;
+  display: none;
+  border-radius: 0 0 16px 16px;
+  overflow: hidden;
+  border-left: 1px solid #e8e8ee;
+  border-right: 1px solid #e8e8ee;
+  max-height: calc(100vh - 70px);
+  margin: 0;
+  overflow-y: auto;
+}
+#vomnibar > ul::-webkit-scrollbar {
+  width: 10px;
+}
+#vomnibar > ul::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+  border-radius: 10px; /*滚动条的背景区域的圆角*/
+}
+#vomnibar > ul::-webkit-scrollbar-thumb {
+  border-radius: 10px; /*滚动条的圆角*/
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.6);
+}
+
+#vomnibar {
+  display: block;
+  position: fixed;
+  width: calc(100% - 20px);
+  max-height: 100%;
+  top: 8px;
+  left: 8px;
+  font-family: sans-serif;
+  text-align: left;
+  z-index: 2139999999;
+}
+#vomnibar input {
+  color: #222226;
+  height: 60px;
+  margin-left: 60px;
+  padding: 4px;
+  border: none;
+  width: calc(100% - 125px);
+  outline: none;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-weight: 400;
+}
+#vomnibar input::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  color: #999aaa;
+  line-height: 52px;
+}
+#vomnibar .vomnibarSearchArea {
+  border: 1px solid #e8e8ee;
+  border-bottom: none;
+  display: block;
+  position: relative;
+  height: 60px;
+  background: #ffffff;
+  box-shadow: 0px 2px 12px 0px rgba(34, 34, 38, 0.1);
+  border-radius: 16px;
+}
+#vomnibar .vomnibarSearchArea .close-icon {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 80px;
+  padding: 10px;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#vomnibar .vomnibarSearchArea .search-icon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#vomnibar .vomnibarSearchArea .settings-icon:hover path,
+#vomnibar .vomnibarSearchArea .settings-icon:hover circle {
+  stroke: #1a87ff;
+}
+#vomnibar .vomnibarSearchArea .settings-icon {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  cursor: pointer;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#vomnibar .vomnibarSearchArea::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 1px;
+  height: 44px;
+  border-right: 1px solid #e8e8ee;
+  right: 63px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#vomnibar > ul {
+  background-color: white;
+  border-radius: 0 0 16px 16px;
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+}
+#vomnibar > ul::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+#vomnibar > ul::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.2);
+}
+
+#vomnibar > ul::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+#vomnibar > ul li {
+  line-height: 22px;
+  padding: 8px 10px;
+  padding-left: 60px;
+  cursor: pointer;
+  font-size: 16px;
+  color: black;
+  position: relative;
+  display: list-item;
+  margin: auto;
+}
+#vomnibar > ul li [id^='frame-'] {
+  min-height: 40px;
+}
+
+#vomnibar > ul li .vimium-json {
+  margin-left: -50px;
+  width: calc(100% + 50px);
+}
+#vomnibar > ul li.frame {
+  padding: 8px 10px;
+}
+#vomnibar > ul li .type-icon {
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+}
+
+#vomnibar > ul li:last-of-type {
+  border-bottom: none;
+}
+
+#vomnibar > ul li .vomnibarTopHalf,
+#vomnibar > ul li .vomnibarBottomHalf {
+  display: block;
+  overflow: hidden;
+}
+#vomnibar > ul li .vomnibarTopHalf,
+#vomnibar > ul li .vomnibarBottomHalf-csdn {
+  display: flex;
+}
+#vomnibar > ul li .vomnibarTopHalf,
+#vomnibar > ul li .vomnibarBottomHalf-csdn .vomnibarUrl {
+  text-overflow: ellipsis;
+  width: 95%;
+  overflow: hidden;
+}
+
+#vomnibar > ul li .vomnibarBottomHalf {
+  font-size: 15px;
+  margin-top: 3px;
+  padding: 2px 0;
+}
+
+#vomnibar > ul li .vomnibarIcon {
+  padding: 0 13px 0 6px;
+  vertical-align: middle;
+}
+
+#vomnibar > ul li.frame .frame-loading {
+  color: #000;
+  margin: 0;
+  position: absolute;
+  width: 35px;
+  height: 30px;
+  z-index: 99;
+}
+#vomnibar > ul li .vomnibarSource {
+  margin-right: 4px;
+  margin-right: 4px;
+  max-height: 18px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #2774cc;
+  background: #e9f1f9;
+  padding: 1px 4px;
+}
+
+#vomnibar > ul li .vomnibarRelevancy {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 5px;
+  background-color: white;
+  color: black;
+  font-family: monospace;
+  width: 100px;
+  overflow: hidden;
+}
+
+#vomnibar > ul li .vomnibarUrl {
+  display: inline-block;
+  width: calc(100% - 70px);
+  overflow: hidden;
+  vertical-align: bottom;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #555666;
+}
+
+#vomnibar > ul li .vomnibarMatch {
+  font-weight: bold;
+  color: #fc5531;
+}
+
+#vomnibar > ul li em,
+#vomnibar > ul li .vomnibarTitle {
+  color: #2f58c1;
+  font-weight: normal;
+}
+
+#vomnibar > ul li .copy-btn {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#vomnibar > ul li em {
+  font-style: normal;
+  color: #fc5531;
+  font-weight: bold;
+}
+#vomnibar > ul li em .vomnibarMatch,
+#vomnibar > ul li .vomnibarTitle .vomnibarMatch {
+  color: #fc5531;
+}
+
+#vomnibar > ul li.vomnibarSelected {
+  background-color: #f0f0f5;
+  font-weight: normal;
+}
+
+#vomnibar > ul li:hover {
+  background-color: #f0f0f5;
+  font-weight: normal;
+}
+
+#vomnibarInput::selection {
+  background-color: #e6eefb;
+}
+#vomnibar .issues {
+  display: none;
+  position: absolute;
+  right: 8px;
+  bottom: 10px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+}
+#vomnibar .issues:hover img {
+  display: none;
+}
+#vomnibar .issues:hover a {
+  display: block;
+}
+#vomnibar .issues img {
+  width: 20px;
+  cursor: pointer;
+}
+#vomnibar .issues a {
+  display: none;
+  cursor: pointer;
+  color: #888;
+  font-size: 12px;
+}
+#vomnibar .vimium-json {
+  margin: 0;
+  width: 100%;
+  padding: 0;
+}
+#vomnibar #help-panel {
+  color: #000;
+  word-break: break-all;
+  white-space: pre-wrap;
+  height: 100%;
+  overflow-y: auto;
+  margin-left: -40px;
+}
+
+#vomnibar .vimium-qrcode {
+  text-align: center;
+  padding: 10px;
+}
+.vomnibarNoInsertText {
+  visibility: hidden;
+}
+/* json */
+.vimiumReset .json-result-panel {
+  height: calc(100vh - 140px);
+  width: 100%;
+  position: relative;
+}
+.vimiumReset .json-result-panel .extras {
+  position: absolute;
+  top: 5px;
+  z-index: 10;
+  right: 30px;
+}
+.vimiumReset .json-result-panel .extras a {
+  margin-left: 8px;
+  cursor: pointer;
+}
+.vimiumReset .json-result-panel .extras a img {
+  transition: all 0.3s;
+  border-radius: 5px;
+  padding: 5px;
+  width: 26px;
+  height: 26px;
+}
+.vimiumReset .json-result-panel .extras:hover a img {
+  background: #f3f3f3;
+}
+.vimiumReset .json-result-panel > pre {
+  white-space: pre-wrap;
+  word-break: break-all;
+  height: 100%;
+  overflow: auto;
+}
+
+/* Dark Vomnibar */
+@media (prefers-color-scheme: dark) {
+  #vomnibar {
+    border-radius: 6px;
+  }
+
+  #vomnibar .vomnibarSearchArea {
+    background-color: #1c1d30;
+    border: none;
+  }
+
+  #vomnibar .vomnibarSearchArea::before {
+    border-right: 1px solid #999aaa;
+  }
+  #vomnibar input {
+    background-color: #1c1d30;
+    color: white;
+    border: none;
+  }
+
+  #vomnibar > ul {
+    background-color: #0f0f1e;
+    border: none;
+  }
+
+  #vomnibar > ul li {
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  #vomnibar > ul li.vomnibarSelected {
+    background-color: #222226;
+  }
+  #vomnibar > ul li:hover {
+    background-color: #222226;
+  }
+  #vomnibar > ul li .vomnibarUrl {
+    white-space: nowrap;
+    color: #c4c4c8;
+  }
+  #vomnibar > ul li .vomnibarUrl em {
+    color: #fc5531;
+  }
+
+  #vomnibar > ul li em,
+  #vomnibar > ul li .vomnibarTitle {
+    color: white;
+  }
+  #vomnibar > ul li .vomnibarTitle em {
+    color: #fc5531;
+  }
+  #vomnibar > ul li .vomnibarSource {
+    font-size: 14px;
+    flex-shrink: 0;
+    max-height: 18px;
+    border-radius: 4px;
+    color: #2774cc;
+    background: #e9f1f9;
+    padding: 1px 4px;
+  }
+  #vomnibar > ul li.frame .frame-loading {
+    color: #fbfbfb;
+  }
+  #vomnibar > ul li .vomnibarMatch {
+    color: #fc5531;
+  }
+  #vomnibar > ul li em .vomnibarMatch,
+  #vomnibar > ul li .vomnibarTitle .vomnibarMatch {
+    color: #fc5531;
+  }
+  #vomnibar #help-panel {
+    color: #ececec;
+  }
+  #vomnibar #help-panel::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+    border-radius: 10px; /*滚动条的背景区域的圆角*/
+  }
+  #vomnibar #help-panel::-webkit-scrollbar-thumb {
+    border-radius: 10px; /*滚动条的圆角*/
+    -webkit-box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.4);
+  }
+  .vimiumReset .json-result-panel .extras:hover a img {
+    background: #505050;
+  }
+  .vimiumReset .json-result-panel > pre {
+    color: #d4d4d4;
+  }
+}
+/*
+#vomnibar > ul li .vomnibarSource-csdn {
+  color: #FC5531;
+  background: #fff1f0;
+}
+#vomnibar > ul li .vomnibarSource-bookmark {
+  color: #66b555;
+  background: #eef8ec;
+}
+#vomnibar > ul li .vomnibarSource-history {
+  color: #555666;
+  background: #f0f0f5;
+}
+#vomnibar > ul li .vomnibarSource-tab {
+  color: #2774cc;
+  background: #e9f1f9;
+} */
+.vimiumReset .time-copy:hover {
+  color: #fc5531;
+}

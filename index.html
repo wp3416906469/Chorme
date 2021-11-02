@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="report" content='{ "spm": "1021.2146"}' />
+    <title></title>
+    <link rel="stylesheet" href="./searchBox.css" />
+    <script src="/js/jquery-3.5.1.min.js"></script>
+    <script src="./lib/utils.js"></script>
+    <script src="./lib/dom_utils.js"></script>
+    <script src="./lib/settings.js"></script>
+    <script src="./lib/keyboard_utils.js"></script>
+    <script src="/js/dayjs.min.js"></script>
+    <script src="/js/searchBox-report.js"></script>
+    <script src="/js/report.js"></script>
+  </head>
+  <body>
+    <div id="vomnibar">
+      <div class="vomnibarSearchArea">
+        <img class="search-icon" src="./icons/search.svg" alt="" />
+        <input id="vomnibarInput" placeholder="输入并搜索…" type="text" autocomplete="off" />
+        <img class="close-icon" src="./icons/close.svg" alt="" />
+        <!-- <img class="settings-icon" src="./icons/settings.svg" alt=""> -->
+        <svg class="settings-icon" width="24px" height="22px" viewBox="0 0 24 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <title>settings</title>
+          <g id="2020/11/16新logo替换" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="插件快捷搜索" transform="translate(-1239.000000, -164.000000)" stroke="#999AAA" stroke-width="1.5">
+              <g id="编组-22" transform="translate(87.000000, 145.000000)">
+                <g id="ic_公共图标_设置备份-5" transform="translate(1152.000000, 18.000000)">
+                  <path
+                    d="M11.9927858,1.20688741 C12.3812477,1.20688741 12.7697096,1.30736835 13.1177858,1.50833025 L13.1177858,1.50833025 L20.5100906,5.77627944 C21.2062431,6.17820323 21.6350906,6.92098902 21.6350906,7.7248366 L21.6350906,7.7248366 L21.6350906,16.260735 C21.6350906,17.0645826 21.2062431,17.8073684 20.5100906,18.2092921 L20.5100906,18.2092921 L13.1177858,22.4772413 C12.7697096,22.6782032 12.3812477,22.7786842 11.9927858,22.7786842 C11.6043239,22.7786842 11.215862,22.6782032 10.8677858,22.4772413 L10.8677858,22.4772413 L3.47548095,18.2092921 C3.12740474,18.0083302 2.84615474,17.7221529 2.65192379,17.385735 C2.45769284,17.0493171 2.35048095,16.6626588 2.35048095,16.260735 L2.35048095,16.260735 L2.35048095,7.7248366 C2.35048095,7.32291281 2.45769284,6.93625447 2.65192379,6.5998366 C2.84615474,6.26341873 3.12740474,5.97724134 3.47548095,5.77627944 L3.47548095,5.77627944 L10.8677858,1.50833025 C11.215862,1.30736835 11.6043239,1.20688741 11.9927858,1.20688741 Z"
+                    id="多边形"
+                    transform="translate(11.992786, 11.992786) rotate(-330.000000) translate(-11.992786, -11.992786) "
+                  ></path>
+                  <circle id="椭圆形" cx="12" cy="12" r="3.75"></circle>
+                </g>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <ul></ul>
+    </div>
+    <script src="/js/jquery.tipTip.minified.js"></script>
+    <script src="/js/clipboard.min.js"></script>
+
+    <script src="./ui-render.js"></script>
+    <script src="./searchBox.js"></script>
+
+    <!-- codemirror -->
+    <script src="/vendor/codemirror/lib/codemirror.min.js"></script>
+    <script src="/vendor/codemirror/mode/javascript/javascript.js"></script>
+    <!-- codemirror css -->
+    <link rel="stylesheet" href="/vendor/codemirror/addon/fold/foldgutter.css" />
+    <link rel="stylesheet" href="/packages/json-format/css/custom.css" />
+    <link rel="stylesheet" href="/css/tipTip.css" />
+    <link rel="stylesheet" href="/vendor/codemirror/theme/default.css" />
+    <link rel="stylesheet" href="/vendor/codemirror/theme/dark/okaidia.css" />
+    <link rel="stylesheet" href="/vendor/codemirror/addon/lint/lint.css" />
+    <link rel="stylesheet" href="/vendor/codemirror/addon/scroll/simplescrollbars.css" />
+    <script src="/packages/json-format/js/json-lint.js"></script>
+    <script src="/vendor/codemirror/keymap/sublime.js"></script>
+    <script src="/vendor/codemirror/addon/fold/foldcode.js"></script>
+    <script src="/vendor/codemirror/addon/fold/foldgutter.js"></script>
+    <script src="/vendor/codemirror/addon/fold/brace-fold.js"></script>
+    <script src="/vendor/codemirror/addon/scroll/annotatescrollbar.js"></script>
+    <script src="/vendor/codemirror/addon/scroll/simplescrollbars.js"></script>
+    <script src="/vendor/codemirror/addon/lint/lint.js "></script>
+    <script src="/vendor/codemirror/addon/lint/json-lint.js"></script>
+    <script src="/packages/json-format/js/json_utils.js"></script>
+    <script src="/packages/json-format/js/jsl-format.js"></script>
+    <script src="/packages/json-format/js/date-format.js"></script>
+    <script src="/packages/json-format/js/json-format.js"></script>
+    <!-- qrcode -->
+    <script src="/vendor/qrcode/qrcode.min.js"></script>
+  </body>
+</html>

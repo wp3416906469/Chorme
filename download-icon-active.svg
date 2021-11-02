@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>7.Icon/interface/18.download备份</title>
+    <g id="7.Icon/interface/18.download备份" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M14.5,10.0123912 L14.5,11.7 C14.5,12.8045695 13.6045695,13.7 12.5,13.7 L3.5,13.7 C2.3954305,13.7 1.5,12.8045695 1.5,11.7 L1.5,10.0094735 L1.5,10.0094735" id="路径" stroke="#222226" stroke-linecap="round" stroke-linejoin="round"></path>
+        <g id="编组" transform="translate(8.300000, 6.000000) scale(1, -1) translate(-8.300000, -6.000000) translate(4.300000, 1.500000)" stroke="#222226">
+            <rect id="矩形" x="3.7" y="1" width="1" height="7" rx="0.5"></rect>
+            <polyline id="路径-6" stroke-linecap="round" stroke-linejoin="round" points="2.27817765e-13 3.49238833 0.470212919 3.05098487 3.72032904 -2.22044605e-16 6.731359 3.00091008 6.77750952 3.0469055 7.22449464 3.49238833"></polyline>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,37 @@
+body > #footer{
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+}
+.container.logo-search, 
+.container.navigation,  
+div.fixed-btn,
+#respond,
+#comments,
+button.feedback-btn,
+.container.main > .row .right-column,
+[id^='ad-']{
+  display: none !important;
+} 
+.container {
+  padding-right: 0 !important;
+}
+
+.main {
+  margin-top: 0 !important;
+}
+.container.main > .row .left-column{ 
+  position: fixed;
+  width: 185px;
+}
+.row { 
+  display: flex;
+  width: 100%;
+}
+.row .runoob-col-md2{
+  width: 185px;
+}
+.row .col.middle-column { 
+  flex: 1;
+  margin-right: 0 !important;
+}
