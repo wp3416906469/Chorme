@@ -1,0 +1,16 @@
+[id^='kp_box'] {
+  display: none !important;
+}
+[id^='floor-ad'] {
+  display: none;
+}
+#www-home-right .www-home-silde .broadcast-active,
+#www-home-right .www-home-silde .www-home-silde-top {
+  display: none !important;
+} 
+www-home-silde-top .ad_fullWidth,
+.top-banner,
+.hot-brand,
+.google-auto-placed {
+  display: none !important;
+}
